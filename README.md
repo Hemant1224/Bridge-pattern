@@ -7,3 +7,40 @@ Abstraction (also called the "Bridge"): This is the interface that defines the c
 Refined Abstraction: This is an optional level of abstraction that provides additional functionality by extending the Abstraction.
 Implementor: This is the interface that defines the implementation-specific operations. It is decoupled from the Abstraction, allowing multiple implementations to exist.
 Concrete Implementor: This is the actual implementation of the Implementor interface.
+
+
+# UML diagram for code
+
+┌────────────────┐
+│     Device     │
+│----------------│
+│+ Device(implementor)
+│+ toggle_power()│
+└───────┬────────┘
+        │
+        │ extends
+        ▼
+┌────────────────┐
+│      TV        │
+│----------------│
+│+ watch_channel(channel)
+└────────────────┘
+
+        ┌───────────────────┐
+        │ DeviceImplementor │
+        │--------------------│
+        │+ is_enabled()      │
+        │+ enable()          │
+        │+ disable()         │
+        └───────────┬────────┘
+                    │
+                    │ implements
+                    ▼
+        ┌───────────────────┐
+        │    RemoteControl  │
+        │--------------------│
+        │- is_on             │
+        │+ is_enabled()      │
+        │+ enable()          │
+        │+ disable()         │
+        └───────────────────┘
