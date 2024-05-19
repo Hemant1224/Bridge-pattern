@@ -12,7 +12,3 @@ Concrete Implementor: This is the actual implementation of the Implementor inter
 # UML diagram for code
 
 <img width="131" alt="image" src="https://github.com/Hemant1224/Bridge-pattern/assets/66623321/5d3ac6ef-3aac-4986-a9f5-507c86546ad5">
-
-
-
-        └───────────────────┘
